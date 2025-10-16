@@ -1,0 +1,235 @@
+.footer {
+  // .footer__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(40);
+    background-color: var(--whiteColor);
+    padding-top: toRem(65);
+    padding-bottom: toRem(65);
+    @media (max-width: toEm(767.98)) {
+      padding-top: toRem(31);
+      padding-bottom: toRem(31);
+      gap: toRem(21);
+    }
+  }
+
+  // .footer__main
+
+  &__main {
+  }
+
+  // .footer__border
+
+  &__border {
+    width: 100%;
+    height: toRem(1);
+    background-color: var(--mainColor);
+    opacity: 0.3;
+  }
+
+  // .footer__bottom
+
+  &__bottom {
+  }
+}
+.main-footer {
+  // .main-footer__row
+
+  &__row {
+    display: flex;
+    // flex-wrap: wrap;
+    gap: toRem(25);
+    justify-content: space-between;
+    @media (max-width: toEm(767.98)) {
+      row-gap: toRem(40);
+      flex-direction: column;
+    }
+  }
+
+  // .main-footer__info
+
+  &__info {
+    flex-basis: toRem(400);
+    @media (max-width: toEm(991.98)) {
+      flex-basis: toRem(335);
+    }
+    @media (max-width: toEm(767.98)) {
+      flex-basis: auto;
+    }
+  }
+
+  // .main-footer__links
+
+  &__links {
+  }
+}
+.info-main-footer {
+  // .info-main-footer__logo
+
+  &__logo {
+    margin-bottom: toRem(16);
+  }
+
+  // .info-main-footer__text
+
+  &__text {
+    margin-bottom: toRem(24);
+    font-size: toRem(14);
+    color: var(--lightColor);
+    line-height: 1.71; /* 24/14 */
+  }
+
+  // .info-main-footer__app
+
+  &__app {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(12);
+  }
+
+  // .info-main-footer__app-google
+
+  &__app-google {
+    max-width: toRem(135);
+    max-height: toRem(40);
+    & > img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  // .info-main-footer__app-store
+
+  &__app-store {
+    max-width: toRem(120);
+    max-height: toRem(40);
+    & > img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}
+
+.logo-info-footer {
+  display: flex;
+  align-items: center;
+  column-gap: toRem(7);
+  // .logo-info-footer__img
+
+  &__img {
+    width: toRem(37);
+    height: toRem(37);
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // .logo-info-footer__text
+
+  &__text {
+    font-size: toRem(17);
+    font-family: "Comic Neue", serif;
+    font-weight: 500;
+    & > span {
+      font-weight: 700;
+    }
+  }
+}
+.links-main-footer {
+  // .links-main-footer__row
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: toRem(100);
+    row-gap: toRem(38);
+    @media (max-width: toEm(991.98)) {
+      column-gap: toRem(40);
+    }
+    @media (max-width: toEm(767.98)) {
+      @media (max-width: toEm(991.98)) {
+        column-gap: toRem(62);
+      }
+    }
+  }
+
+  // .links-main-footer__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(20);
+  }
+
+  // .links-main-footer__item-title
+
+  &__item-title {
+    margin-bottom: toRem(10);
+    font-weight: 700;
+    line-height: 1.5; /* 25/16 */
+  }
+
+  // .links-main-footer__item
+
+  &__item {
+    color: var(--lightColor);
+    font-size: toRem(14);
+    font-weight: 600;
+    line-height: 1.71; /* 24/14 */
+
+    display: flex;
+    align-items: center;
+    column-gap: toRem(10);
+    & > img {
+      width: toRem(23);
+      height: toRem(23);
+      object-fit: contain;
+    }
+  }
+
+  // .links-main-footer__link
+
+  &__link {
+  }
+}
+.bottom-footer {
+  // .bottom-footer__row
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: toRem(20);
+    justify-content: space-between;
+  }
+
+  // .bottom-footer__links
+
+  &__links {
+    font-size: toRem(14);
+    font-weight: 600;
+    line-height: 1.71; /* 24/14 */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: toRem(20);
+    @media (max-width: toEm(500)) {
+      // column-gap: toRem(10);
+    }
+  }
+
+  // .bottom-footer__copyright
+
+  &__copyright {
+    font-size: toRem(14);
+    font-weight: 600;
+
+    line-height: 1.71; /* 24/14 */
+  }
+}

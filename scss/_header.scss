@@ -1,0 +1,250 @@
+.header {
+  // .header__wrapper
+
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: var(--whiteColor);
+    z-index: 10;
+  }
+
+  // .header__container
+
+  &__container {
+  }
+
+  // .header__row
+
+  &__row {
+    padding: toRem(17) 0;
+    display: flex;
+    column-gap: toRem(49);
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: toEm(991.98)) {
+      column-gap: toRem(30);
+    }
+    @media (max-width: toEm(767.98)) {
+      padding: toRem(19) 0;
+    }
+  }
+
+  // .header__logo
+
+  &__logo {
+  }
+
+  // .header__nav
+
+  &__nav {
+    margin-left: auto;
+
+    @media (max-width: toEm(767.98)) {
+      background-color: var(--whiteColor);
+
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 50%;
+      height: 100vh;
+      z-index: 8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: toRem(50);
+      padding: toRem(100);
+      overflow-y: auto;
+      transition: transform ease-in-out 0.3s;
+      transform: translateX(100%);
+    }
+    @media (max-width: toEm(500)) {
+      width: 100%;
+    }
+    &.active {
+      transform: translateX(0);
+      transition: transform ease-in-out 0.3s;
+    }
+  }
+
+  // .header__app
+
+  &__app {
+  }
+
+  // .header__burger
+
+  &__burger {
+    display: none;
+    @media (max-width: toEm(767.98)) {
+      display: block;
+    }
+  }
+
+  // .header__theme
+
+  &__theme {
+    width: toRem(40);
+    height: toRem(40);
+    margin-right: auto;
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @media (max-width: toEm(991.98)) {
+      // margin-left: toRem(-25);
+    }
+  }
+}
+
+.logo-header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  column-gap: toRem(7);
+  // .logo-header__img
+
+  &__img {
+    width: toRem(37);
+    height: toRem(37);
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // .logo-header__text
+
+  &__text {
+    font-size: toRem(17);
+    font-family: "Comic Neue", serif;
+    font-weight: 500;
+    & > span {
+      font-weight: 700;
+    }
+    @media (max-width: toEm(991.98)) {
+      display: none;
+    }
+  }
+}
+
+.burger-header {
+  width: toRem(32);
+  height: toRem(23);
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  cursor: pointer;
+  // .burger-header__border
+
+  &__border {
+    width: 100%;
+    height: toRem(2);
+    background-color: var(--blackColor);
+    position: absolute;
+    left: 0;
+    transition: transform ease-in-out 0.3s;
+    &:nth-child(1) {
+      top: 0;
+    }
+    &:nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:nth-child(3) {
+      bottom: 0;
+    }
+    .burger-header.active > & {
+      &:nth-child(1) {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+      }
+      &:nth-child(2) {
+        transform: translateX(200%);
+      }
+      &:nth-child(3) {
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+  }
+}
+
+.nav-header {
+  // .nav-header__list
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: toRem(48);
+    @media (max-width: toEm(991.98)) {
+      column-gap: toRem(20);
+    }
+
+    @media (max-width: toEm(767.98)) {
+      flex-direction: column;
+      row-gap: toRem(15);
+      align-items: start;
+    }
+  }
+
+  // .nav-header__item
+
+  &__item {
+  }
+
+  // .nav-header__link
+
+  &__link {
+    color: var(--lightColor);
+    line-height: 1.56; /* 25/16 */
+    transition: color 0.3s, font-weight 0.2s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--mainColor);
+        font-weight: 700;
+        transition: color 0.3s, font-weight 0.2s;
+      }
+    }
+  }
+}
+.app-header {
+  display: flex;
+  align-items: center;
+  column-gap: toRem(12);
+
+  @media (max-width: toEm(767.98)) {
+    flex-direction: column-reverse;
+    row-gap: toRem(15);
+    align-items: start;
+  }
+  // .app-header__google
+
+  &__google {
+    max-width: toRem(135);
+    max-height: toRem(41);
+    & > img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  // .app-header__app-store
+
+  &__app-store {
+    max-width: toRem(120);
+    max-height: toRem(41);
+    & > img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}

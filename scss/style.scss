@@ -1,0 +1,54 @@
+@use "sass:math";
+
+//==============function============
+@function toRem($px, $rem: 16) {
+  @return math.div($px, $rem) * 1rem;
+}
+@function toEm($px, $em: 16) {
+  @return math.div($px, $em) * 1em;
+}
+//==========color======
+:root {
+  --mainColor: #0d1216;
+  --lightColor: #313c45;
+  --whiteColor: #ffffff;
+  --blackColor: #000000;
+}
+// $mainColor: #0d1216;
+// $lightColor: #313c45;
+// $whiteColor: #ffffff;
+// $blackColor: #000000;
+.dark-theme {
+  --mainColor: #cbcbcb;
+  --lightColor: #abacac;
+  --whiteColor: #000000;
+  --blackColor: #f9f9f9;
+}
+//===============================
+[class*="__container"] {
+  max-width: toRem(1270);
+  margin: 0 auto;
+  padding-left: toRem(15);
+  padding-right: toRem(15);
+}
+body {
+  font-family: "Quicksand";
+  font-weight: 500;
+  font-style: normal;
+  color: var(--mainColor);
+  // background-color: #3f3d3d;
+}
+// @media (any-hover: hover) {
+//     &:hover {
+//       color: $mainColor;
+//       font-weight: 700;
+//       transition: color 0.3s, font-weight 0.2s;
+//     }
+//   }
+//=================================
+
+//==============================
+@import "reset";
+@import "font";
+@import "header";
+@import "footer";
