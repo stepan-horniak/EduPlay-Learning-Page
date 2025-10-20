@@ -1,4 +1,5 @@
 .header {
+  height: toRem(75);
   // .header__wrapper
 
   &__wrapper {
@@ -28,7 +29,7 @@
       column-gap: toRem(30);
     }
     @media (max-width: toEm(767.98)) {
-      padding: toRem(19) 0;
+      padding: toRem(18) 0;
     }
   }
 

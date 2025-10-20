@@ -13,16 +13,18 @@
   --lightColor: #313c45;
   --whiteColor: #ffffff;
   --blackColor: #000000;
+  --backgroundMainColor: #fbfbfd;
+  --backgroundButtonSilverColor: #f0f0f2;
+  --mainGragient: linear-gradient(to right, #00c4cc, #8b3dff);
 }
-// $mainColor: #0d1216;
-// $lightColor: #313c45;
-// $whiteColor: #ffffff;
-// $blackColor: #000000;
+
 .dark-theme {
   --mainColor: #cbcbcb;
   --lightColor: #abacac;
   --whiteColor: #000000;
   --blackColor: #f9f9f9;
+  --backgroundMainColor: #2f2f2f;
+  --backgroundButtonSilverColor: #3e3d3d;
 }
 //===============================
 [class*="__container"] {
@@ -36,7 +38,29 @@ body {
   font-weight: 500;
   font-style: normal;
   color: var(--mainColor);
-  // background-color: #3f3d3d;
+  background-color: var(--whiteColor);
+}
+
+.button {
+  font-weight: 700;
+  line-height: 1.56; /* 25/16 */
+  border-radius: toRem(8);
+  padding: toRem(12) toRem(20);
+  background-color: #8b3dff;
+  color: #fff;
+  @media (max-width: toEm(600)) {
+    width: 100%;
+    text-align: center;
+  }
+}
+.title {
+  font-size: toRem(40);
+  line-height: 1.2; /* 48/40 */
+  font-weight: 700;
+  @media (max-width: toEm(767.98)) {
+    font-size: toRem(24);
+    line-height: 1.33; /* 32/24 */
+  }
 }
 // @media (any-hover: hover) {
 //     &:hover {
@@ -52,3 +76,4 @@ body {
 @import "font";
 @import "header";
 @import "footer";
+@import "page";
