@@ -57,6 +57,9 @@ body {
   font-size: toRem(40);
   line-height: 1.2; /* 48/40 */
   font-weight: 700;
+  @media (max-width: toEm(991.98)) {
+    font-size: toRem(32);
+  }
   @media (max-width: toEm(767.98)) {
     font-size: toRem(24);
     line-height: 1.33; /* 32/24 */

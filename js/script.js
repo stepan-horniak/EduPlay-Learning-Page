@@ -44,11 +44,31 @@ function windowLoaded() {
     } else {
       headerRowContainer.append(headerAppContainer)
     }
+
+    const exploreButton = document.querySelector(".info-explore__button")
+    const exploreInfoContainer = document.querySelector(".explore__info")
+    const exploreImage = document.querySelector(".explore__image")
+    const exploreMainContainer = document.querySelector(".explore__row")
+
+    if (screenWidth <= 650) {
+      if (exploreButton && exploreInfoContainer && exploreImage) {
+      }
+      exploreInfoContainer.append(exploreImage)
+      exploreInfoContainer.append(exploreButton)
+    } else {
+      exploreMainContainer.append(exploreImage)
+    }
   }
 
   //===========================================================
   handleScreenChange()
   window.addEventListener("resize", handleScreenChange)
   //===========================================================
+
+  const swiper = new Swiper(".swiper", {
+    direction: "vertical",
+    slidesPerView: 2,
+    spaceBetween: 30,
+  })
 }
 addEventListener("load", windowLoaded)
