@@ -51,12 +51,32 @@ function windowLoaded() {
     const exploreMainContainer = document.querySelector(".explore__row")
 
     if (screenWidth <= 650) {
-      if (exploreButton && exploreInfoContainer && exploreImage) {
+      if (
+        exploreButton &&
+        exploreInfoContainer &&
+        exploreImage &&
+        exploreMainContainer
+      ) {
       }
       exploreInfoContainer.append(exploreImage)
       exploreInfoContainer.append(exploreButton)
     } else {
       exploreMainContainer.append(exploreImage)
+    }
+
+    const subscriptionContainer = document.querySelector(".subscription__email")
+    const subscriptionLabel = document.querySelector(
+      ".email-subscription__label"
+    )
+    const subscriptionButton = document.querySelector(
+      ".email-subscription__button"
+    )
+    if (screenWidth <= 479.98) {
+      if (subscriptionContainer && subscriptionLabel && subscriptionButton) {
+      }
+      subscriptionContainer.append(subscriptionButton)
+    } else {
+      subscriptionLabel.append(subscriptionButton)
     }
   }
 
