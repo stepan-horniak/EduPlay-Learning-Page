@@ -968,6 +968,7 @@ textarea {
 
 .app__wrapper {
   background-color: var(--whiteColor);
+  overflow: hidden;
 }
 .app__row {
   padding: 6.25rem 0;
@@ -1574,6 +1575,11 @@ textarea {
     width: 25rem;
   }
 }
+@media (max-width: 26.5625em) {
+  .bottom-main-join__links {
+    width: auto;
+  }
+}
 .bottom-main-join__games {
   padding: 0.4375rem 0.75rem;
   color: #fff;
@@ -1583,6 +1589,16 @@ textarea {
   white-space: nowrap;
   text-align: center;
 }
+@media (max-width: 26.5625em) {
+  .bottom-main-join__games {
+    padding: 0.4375rem 0.25rem;
+  }
+}
+@media (max-width: 21.875em) {
+  .bottom-main-join__games {
+    padding: 0.4375rem 0.125rem;
+  }
+}
 .bottom-main-join__practice {
   -ms-flex-preferred-size: 13.75rem;
       flex-basis: 13.75rem;
@@ -1591,6 +1607,16 @@ textarea {
   white-space: nowrap;
   background-color: var(--whiteColor);
   color: var(--mainColor);
+}
+@media (max-width: 26.5625em) {
+  .bottom-main-join__practice {
+    padding: 0.4375rem 0.3125rem;
+  }
+}
+@media (max-width: 21.875em) {
+  .bottom-main-join__practice {
+    padding: 0.4375rem 0.125rem;
+  }
 }
 
 .bottom-join {
@@ -1957,4 +1983,329 @@ textarea {
     width: 100%;
     padding: 0.75rem 1.25rem;
   }
+}
+
+.testimonials__wrapper {
+  background-image: url(../images/features/wrapper-image.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.testimonials__container {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+}
+@media (max-width: 47.99875em) {
+  .testimonials__container {
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+  }
+}
+.testimonials__row-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.testimonials__title {
+  margin-bottom: 1.5rem;
+  max-width: 37.5rem;
+  text-align: center;
+}
+@media (max-width: 47.99875em) {
+  .testimonials__title {
+    margin-bottom: 1rem;
+  }
+}
+.testimonials__info-text {
+  margin-bottom: 3.75rem;
+  color: var(--lightColor);
+  font-size: 1.25rem;
+  line-height: 1.6; /* 32/20 */
+  max-width: 37.5rem;
+  text-align: center;
+}
+.testimonials__info-text > span {
+  text-decoration: underline;
+}
+@media (max-width: 47.99875em) {
+  .testimonials__info-text {
+    margin-bottom: 2rem;
+  }
+}
+.testimonials__message {
+  margin-bottom: 4.5rem;
+}
+@media (max-width: 47.99875em) {
+  .testimonials__message {
+    margin-bottom: 2.5rem;
+  }
+}
+.images-testimonials {
+  position: relative;
+  width: 100%;
+}
+@media (max-width: 61.99875em) {
+  .images-testimonials {
+    display: none;
+  }
+}
+.images-testimonials__planet {
+  position: absolute;
+  top: -5rem;
+  left: -3rem;
+}
+.images-testimonials__planet > img {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+.images-testimonials__drawing {
+  position: absolute;
+  top: -13.125rem;
+  right: -2.5rem;
+}
+.images-testimonials__drawing > img {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.message-testimonials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+@media (max-width: 75em) {
+  .message-testimonials {
+    gap: 1.25rem;
+  }
+}
+.message-testimonials__wrapper-block {
+  padding: 1.875rem;
+  background-color: var(--whiteColor);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 24.0625rem;
+          flex: 1 1 24.0625rem;
+  max-width: 25rem;
+}
+@media (max-width: 75em) {
+  .message-testimonials__wrapper-block {
+    padding: 1.625rem;
+  }
+}
+.message-testimonials__icon {
+  margin-bottom: 1.5rem;
+  width: 2.5rem;
+  height: 1.875rem;
+}
+@media (max-width: 47.99875em) {
+  .message-testimonials__icon {
+    width: 2.1875rem;
+    height: 1.625rem;
+  }
+}
+.message-testimonials__icon > img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.message-testimonials__text {
+  margin-bottom: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.5; /* 27/18 */
+}
+@media (max-width: 47.99875em) {
+  .message-testimonials__text {
+    font-size: 1rem;
+    line-height: 1.43; /* 23/16 */
+  }
+}
+.user-message-testimonials {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.38; /* 25/18 */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 47.99875em) {
+  .user-message-testimonials {
+    font-size: 1rem;
+  }
+}
+.user-message-testimonials__fullname {
+  white-space: nowrap;
+}
+@media (max-width: 23.4375em) {
+  .user-message-testimonials__fullname {
+    margin-right: 0.6875rem;
+  }
+}
+.user-message-testimonials__app {
+  margin-right: 0.8125rem;
+}
+@media (max-width: 47.99875em) {
+  .user-message-testimonials__app {
+    margin-right: 0.6875rem;
+  }
+}
+@media (max-width: 23.4375em) {
+  .user-message-testimonials__app {
+    display: none;
+  }
+}
+.user-message-testimonials__image-stars {
+  width: 6.625rem;
+  height: 1.125rem;
+}
+.user-message-testimonials > img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.app-testimonials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 0.8125rem;
+     -moz-column-gap: 0.8125rem;
+          column-gap: 0.8125rem;
+}
+@media (max-width: 47.99875em) {
+  .app-testimonials {
+    -webkit-column-gap: 0.625rem;
+       -moz-column-gap: 0.625rem;
+            column-gap: 0.625rem;
+  }
+}
+.app-testimonials__google {
+  width: 11rem;
+  height: 3.25rem;
+}
+.app-testimonials__google > img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 47.99875em) {
+  .app-testimonials__google {
+    width: 8.875rem;
+    height: 2.625rem;
+  }
+}
+.app-testimonials__app-store {
+  width: 9.75rem;
+  height: 3.25rem;
+}
+.app-testimonials__app-store > img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 47.99875em) {
+  .app-testimonials__app-store {
+    width: 7.875rem;
+    height: 2.625rem;
+  }
+}
+
+.questions__container {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+}
+@media (max-width: 47.99875em) {
+  .questions__container {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+.questions__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+.questions__title {
+  -ms-flex-preferred-size: 26rem;
+      flex-basis: 26rem;
+}
+.questions__item {
+  -ms-flex-preferred-size: 48rem;
+      flex-basis: 48rem;
+}
+.block-questions {
+  position: relative;
+}
+.block-questions:not(:last-child)::after {
+  content: "";
+  width: 100%;
+  height: 0.0625rem;
+  background-color: #cfd3d6;
+  margin: 2rem 0;
+}
+.block-questions__title {
+  margin-bottom: 1.25rem;
+  margin-left: 2.5rem;
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.45; /* 32/22 */
+}
+.block-questions__button {
+  width: 2.625rem;
+  height: 2.625rem;
+  border-radius: 50%;
+  background: var(--mainGragient);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.block-questions__button-minus {
+  width: 1.25rem;
+  height: 0.125rem;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 0.75rem;
+}
+.block-questions__button-plus {
+  width: 1.25rem;
+  height: 0.125rem;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+      -ms-transform: translate(-50%, -50%) rotate(-90deg);
+          transform: translate(-50%, -50%) rotate(-90deg);
+  border-radius: 0.75rem;
+}
+.block-questions__text {
+  margin-left: 6.6875rem;
+  font-size: 1.125rem;
+  line-height: 1.77; /* 32/18 */
 }
