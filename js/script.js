@@ -22,6 +22,18 @@ function windowLoaded() {
       const isDark = body.classList.contains("dark-theme")
     }
 
+    if (el.closest(".block-questions__button")) {
+      const currentElement = el.closest(".block-questions")
+
+      const buttonOpacity = currentElement.querySelector(
+        ".block-questions__button-plus"
+      )
+      const text = currentElement.querySelector(".block-questions__text")
+
+      text.classList.toggle("active")
+      buttonOpacity.classList.toggle("active")
+    }
+
     //========================================================
   }
   addEventListener("click", clickActions)
@@ -37,12 +49,22 @@ function windowLoaded() {
     const headerNavContainer = document.querySelector(".header__nav")
     const headerAppContainer = document.querySelector(".header__app")
 
+    const tryButton = document.querySelector(".info-try__button")
+    const tryImage = document.querySelector(".try__main-image")
+    const tryInfoContainer = document.querySelector(".try__info")
+
     if (screenWidth <= 767.98) {
       if (headerRowContainer && headerNavContainer && headerAppContainer) {
       }
       headerNavContainer.append(headerAppContainer)
+
+      if (tryButton && tryImage && tryInfoContainer) {
+        tryImage.append(tryButton)
+      }
     } else {
       headerRowContainer.append(headerAppContainer)
+
+      tryInfoContainer.append(tryButton)
     }
 
     const exploreButton = document.querySelector(".info-explore__button")
@@ -84,11 +106,36 @@ function windowLoaded() {
   handleScreenChange()
   window.addEventListener("resize", handleScreenChange)
   //===========================================================
+  const swiper = new Swiper(".slider-join__swiper", {
+    loop: true,
+    // centeredSlides: true,
+    spaceBetween: 30, // відстань між слайдами
+    slidesPerView: 3.5,
+    breakpoints: {
+      0: {
+        spaceBetween: 20,
+        slidesPerView: 1.1,
+      },
+      425: {
+        spaceBetween: 20,
+        slidesPerView: 1.5,
+      },
+      600: {
+        spaceBetween: 20,
+        slidesPerView: 1.8,
+      },
+      768: {
+        slidesPerView: 2.5,
 
-  const swiper = new Swiper(".swiper", {
-    direction: "vertical",
-    slidesPerView: 2,
-    spaceBetween: 30,
+        spaceBetween: 30,
+      },
+      991.98: {
+        slidesPerView: 3.5,
+        centeredSlides: true,
+
+        spaceBetween: 30,
+      },
+    },
   })
 }
 addEventListener("load", windowLoaded)
