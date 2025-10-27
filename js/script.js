@@ -17,9 +17,12 @@ function windowLoaded() {
     if (el.closest(".header__theme")) {
       const toggleBtn = document.querySelector(".header__theme")
       const body = document.body
-      // При натисканні — перемикання
       body.classList.toggle("dark-theme")
-      const isDark = body.classList.contains("dark-theme")
+      console.log(localStorage.getItem("theme"))
+
+      if (localStorage.getItem("theme") === "white") {
+        localStorage.setItem("theme", "dark")
+      } else localStorage.setItem("theme", "white")
     }
 
     if (el.closest(".block-questions__button")) {
@@ -105,37 +108,46 @@ function windowLoaded() {
   //===========================================================
   handleScreenChange()
   window.addEventListener("resize", handleScreenChange)
+  //=================page load====================================
+  if (localStorage.getItem("theme")) {
+    if (localStorage.getItem("theme") === "white") {
+      document.body.classList.remove("dark-theme")
+    } else document.body.classList.add("dark-theme")
+  }
+
   //===========================================================
-  const swiper = new Swiper(".slider-join__swiper", {
-    loop: true,
-    // centeredSlides: true,
-    spaceBetween: 30, // відстань між слайдами
-    slidesPerView: 3.5,
-    breakpoints: {
-      0: {
-        spaceBetween: 20,
-        slidesPerView: 1.1,
-      },
-      425: {
-        spaceBetween: 20,
-        slidesPerView: 1.5,
-      },
-      600: {
-        spaceBetween: 20,
-        slidesPerView: 1.8,
-      },
-      768: {
-        slidesPerView: 2.5,
+  if (document.querySelector(".slider-join__swiper")) {
+    const swiper = new Swiper(".slider-join__swiper", {
+      loop: true,
+      // centeredSlides: true,
+      spaceBetween: 30, // відстань між слайдами
+      slidesPerView: 3.5,
+      breakpoints: {
+        0: {
+          spaceBetween: 20,
+          slidesPerView: 1.1,
+        },
+        425: {
+          spaceBetween: 20,
+          slidesPerView: 1.5,
+        },
+        600: {
+          spaceBetween: 20,
+          slidesPerView: 1.8,
+        },
+        768: {
+          slidesPerView: 2.5,
 
-        spaceBetween: 30,
-      },
-      991.98: {
-        slidesPerView: 3.5,
-        centeredSlides: true,
+          spaceBetween: 30,
+        },
+        991.98: {
+          slidesPerView: 3.5,
+          centeredSlides: true,
 
-        spaceBetween: 30,
+          spaceBetween: 30,
+        },
       },
-    },
-  })
+    })
+  }
 }
 addEventListener("load", windowLoaded)
